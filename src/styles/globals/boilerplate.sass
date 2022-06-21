@@ -1,0 +1,20 @@
+@use '../util' as *
+
+html
+    box-sizing: border-box
+
+*, 
+*::before, 
+*::after
+    box-sizing: inherit
+
+body
+    position: relative
+    margin: 0
+    padding: 0
+    background-color: var(--color-bg)
+
+
+body, input, a
+    font-family: var(--font)
+    color: var(--color-text)

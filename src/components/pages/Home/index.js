@@ -7,6 +7,7 @@ import Toolbar from '../../UI/Toolbar'
 import Spinner from '../../UI/Spinner'
 
 import "./styles.sass"
+import Search from './Search'
 
 const countries = [
     {
@@ -166,13 +167,13 @@ export default class Home extends Component
 
     }
 
-    getItems = () => {
+    getItems = (endPoint = "all") => {
 
         if (this.state.isLoading) return
 
         this.setState({isLoading: true})
 
-        fetch("https://restcountries.com/v3.1/all")
+        fetch(`https://restcountries.com/v3.1/${endPoint}`)
             .then(res => res.json())
             .then(data => this.setState({countries: data.slice(0, 12)}))
             .finally(() => this.setState({isLoading: false}))
@@ -186,7 +187,7 @@ export default class Home extends Component
                 <Toolbar>
                     <div className="search">
                         <Icon name="search" />
-                        <input type="text" placeholder="Search for a country..." />
+                        <Search getItems={this.getItems} />
                     </div>
                     <div className="filter">
                         <select>

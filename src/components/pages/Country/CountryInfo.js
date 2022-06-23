@@ -66,9 +66,9 @@ export default ({ name, flags, population, region, subregion, capital, tld, curr
                     </div>
                     <div className="detail country-border">
                         <span>border countries: </span>    
-                        <span className="value">
-                            {borders ? <List items={borders} itemHandler={(country, index) => <span key={index}>{country}</span>} /> : "none"}
-                        </span>    
+                        <div className="value">
+                            {borders ? <List items={borders} itemHandler={(country, index) => <div key={index}>{country}</div>} /> : "none"}
+                        </div>    
                     </div>
                 </div>
             </div>

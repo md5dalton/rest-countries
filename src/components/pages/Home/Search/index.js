@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import "./styles.sass"
+
 export default ({ getItems }) => {
     // https://restcountries.com/v3.1/name/{name}
 

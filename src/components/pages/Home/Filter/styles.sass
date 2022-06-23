@@ -1,0 +1,35 @@
+@use '../../../../styles/util' as *
+@use '../../../../styles/globals/layout.sass' as *
+
+.toolbar .filter
+    width: fit-content
+    border-radius: 5px
+    box-shadow: 0 0 5px var(--shadow)
+    background-color: var(--color-bg-elements)
+
+    > .icon
+        padding-right: 1em
+
+    // https://moderncss.dev/custom-select-styles-with-pure-css/
+    select
+        appearance: none
+        background-color: transparent
+        border: none
+        margin: 0
+        font-family: inherit
+        font-size: inherit
+        outline: none
+        color: inherit
+
+        width: 200px
+        line-height: 1.1
+        padding: 1em 2em
+        background-color: inherit
+        border-radius: inherit
+        cursor: pointer
+        
+        &::-ms-expand
+            display: none
+
+    @include sm-only
+        margin-top: 2.5em

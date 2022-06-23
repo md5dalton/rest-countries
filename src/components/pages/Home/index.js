@@ -5,9 +5,10 @@ import Icon from '../../UI/Icon'
 import CountryCard from '../../UI/CountryCard'
 import Toolbar from '../../UI/Toolbar'
 import Spinner from '../../UI/Spinner'
+import Search from './Search'
+import Filter from './Filter'
 
 import "./styles.sass"
-import Search from './Search'
 
 const countries = [
     {
@@ -190,14 +191,7 @@ export default class Home extends Component
                         <Search getItems={this.getItems} />
                     </div>
                     <div className="filter">
-                        <select>
-                            <option>Filter by Region</option>
-                            <option>Africa</option>
-                            <option>America</option>
-                            <option>Asia</option>
-                            <option>Europe</option>
-                            <option>Oceania</option>
-                        </select>
+                        <Filter getItems={this.getItems} />
                         <Icon name="chevron-down" />
                     </div>
                 </Toolbar>

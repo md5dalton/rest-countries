@@ -1,0 +1,14 @@
+@use '../../../styles/util' as *
+@use '../../../styles/globals/layout.sass' as *
+
+.toolbar
+    @include sm-only
+        .filter
+            margin-top: 2.5em
+
+    @include md
+        display: flex
+        justify-content: space-between
+
+        .search input
+            min-width: 350px

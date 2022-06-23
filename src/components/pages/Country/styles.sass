@@ -3,18 +3,19 @@
 
 
 .toolbar button
+    display: flex
+    align-items: center
+    justify-content: center
     appearance: none
-    background-color: var(--color-bg-elements)
     border: none
-    color: inherit
     width: 50px
     width: 100px
     line-height: 2.3
-    display: flex
-    justify-content: center
-    align-items: center
+    color: inherit
     cursor: pointer
     margin-top: 2em
+    box-shadow: 0 0 5px var(--shadow)
+    background-color: var(--color-bg-elements)
 
     span
         padding-left: .5em
@@ -26,16 +27,14 @@
 .country-info
     padding: 2em 0
 
-    .flag
-        img
-            width: 100%
-            height: 250px
-            object-fit: cover
+    .flag img
+        width: 100%
+        height: 250px
+        object-fit: cover
 
     .details
         padding: 1em 0
         font-weight: 600
-
 
         .detail
             line-height: 2
@@ -43,8 +42,8 @@
             > *:first-child
                 text-transform: capitalize
 
-            span.value
-                opacity: .6
+            .value
+                color: var(--color-text-secondary)
                 margin-left: .5em
 
         .name
@@ -55,13 +54,20 @@
         .country-border
             margin-top: 2em
 
-            .list *
+            .list  > *
                 background-color: var(--color-bg-elements)
+                box-shadow: 0 0 5px var(--shadow)
                 padding: 5px 2em
                 padding: 0 2em
                 line-height: 1.8em
                 height: 1.8em
                 display: inline-block
+
+                &:not(:first-child)
+                    margin-left: .5em
+
+                &:after
+                    display: none!important
 
         .list 
             display: inline-block

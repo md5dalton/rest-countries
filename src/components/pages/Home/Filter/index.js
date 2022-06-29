@@ -18,7 +18,7 @@ export default ({ getItems }) => {
 
     return (
         <select value={query} onChange={onChange}>
-            <option>Filter by Region</option>
+            <option value="" disabled selected hidden>Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="america">America</option>
             <option value="asia">Asia</option>

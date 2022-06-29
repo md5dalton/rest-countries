@@ -9,7 +9,7 @@ export default () => (
     <main>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="country" element={<Country />}>
+            <Route path="country">
                 <Route path=":name" element={<Country />} />
             </Route>
         </Routes>

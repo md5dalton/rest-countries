@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Error from '../../UI/Error'
 import Spinner from '../../UI/Spinner'
 import CountryInfo from './CountryInfo'
 
@@ -82,7 +83,8 @@ export default () => {
 
     return (
         isLoading ?
-        <Spinner /> : country ?
+        <Spinner /> : error ?
+        <Error>{error}</Error> : country ?
         <CountryInfo {...country} /> : null
     )
 }

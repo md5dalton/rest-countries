@@ -7,6 +7,7 @@ import Toolbar from '../../UI/Toolbar'
 import Spinner from '../../UI/Spinner'
 import Search from './Search'
 import Filter from './Filter'
+import Error from '../../UI/Error'
 
 import "./styles.sass"
 
@@ -198,8 +199,8 @@ export default class Home extends Component
                 <section className="countries-list">
                     <Fragment>{
                         this.state.isLoading ?
-                        <Spinner isLoading={this.state.isLoading} /> : this.state.error ?
-                        <div>{this.state.error}</div> : this.state.countries.length ?
+                        <Spinner /> : this.state.error ?
+                        <Error>{this.state.error}</Error> : this.state.countries.length ?
                         <List items={this.state.countries} itemHandler={(item, index) => <CountryCard key={index} {...item} />} /> :
                         <div>No results</div>
                     }</Fragment>

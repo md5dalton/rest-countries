@@ -1,12 +1,11 @@
 @use '../../../styles/util' as *
-@use '../../../styles/globals/layout.sass' as *
 
 .countries-list
     padding-bottom: 5em
 
     @include md
         > .list
-            display: grid
-            grid-template-columns: repeat(4, 1fr)
-            gap: 70px
             padding-top: 2em
+            display: grid
+            gap: 70px
+            grid-template-columns: repeat(4, 1fr)

@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import Icon from '../../../UI/Icon'
 
-import './styles.sass'
-
 export default () => {
     
-    const [ theme, setTheme ] = useState('light')
+    const defaultTheme = "light"
+    const altTheme = "dark"
 
     const getTheme = () => localStorage.getItem("theme")
+
+    const [ theme, setTheme ] = useState(getTheme())
     
     const toggleTheme = () => {
 
-        const savedTheme = getTheme()
+        const theme = getTheme()
 
-        const newTheme = savedTheme === "light" ? "dark" : "light"
+        let newTheme = theme !== defaultTheme ? defaultTheme : altTheme  
+        if (!theme) newTheme = altTheme
         
         localStorage.setItem("theme", newTheme)
 
@@ -21,21 +23,17 @@ export default () => {
 
     }
 
-    const savedTheme = getTheme()
-
     useEffect(() => {
-
-        document.body.classList.remove("light", "dark")
-        document.body.classList.add(savedTheme || "dark")
-
+        document.body.classList.remove(defaultTheme, altTheme)
+        document.body.classList.add(theme, defaultTheme)
     })
 
     return (
-        <div className="toggle">
-            <input type="checkbox" id="theme" checked={getTheme() === "dark" ? true : false} onChange={toggleTheme} />
+        <div id="theme-toggler">
+            <input type="checkbox" id="theme" checked={theme === altTheme ? true : false} onChange={toggleTheme} />
             <label htmlFor="theme">
-                <Icon name={savedTheme === "light" ? "moon-outline" : "moon"} />
-                <span>Dark Theme</span>
+                <Icon name={theme === altTheme ? "moon-filled" : "moon"} />
+                <span>{theme || defaultTheme} theme</span>
             </label>
         </div>
     )

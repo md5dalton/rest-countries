@@ -1,5 +1,4 @@
 @use '../../../styles/util' as *
-@use '../../../styles/globals/layout.sass' as *
 
 .country-card
     background-color: var(--color-bg-elements)
@@ -7,7 +6,7 @@
     border-radius: .5em
     overflow: hidden
 
-    @include sm-only
+    @include mobile-only
         &:not(:first-child)
             margin-top: 3em
 

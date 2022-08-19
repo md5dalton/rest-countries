@@ -6,7 +6,7 @@ import './styles.sass'
 
 export default () => (
     <header>
-        <div className="wrapper">
+        <div className="flex-wrapper">
             <h1>
                 <Link to="/">Where in the world?</Link> 
             </h1>

@@ -165,7 +165,7 @@ export default class Home extends Component
 
     componentDidMount () {
 
-        this.getItems()
+        // this.getItems()
 
     }
 

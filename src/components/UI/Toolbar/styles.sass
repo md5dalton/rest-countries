@@ -1,12 +1,11 @@
 @use '../../../styles/util' as *
-@use '../../../styles/globals/layout.sass' as *
 
 .toolbar
-    @include sm-only
+    @include mobile-only
         .filter
             margin-top: 2.5em
 
-    @include md
+    @include tablet
         display: flex
         justify-content: space-between
 

@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import Main from './layout/Main'
 import Header from './layout/Header'
 
-import '../styles/styles.sass'
+import "./App.sass"
 
 class App extends Component
 {
   
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <Header />
         <Main />
-      </HashRouter>
+      </BrowserRouter>
     )
   }
 }

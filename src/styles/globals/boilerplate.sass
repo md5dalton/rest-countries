@@ -4,9 +4,6 @@ html
     box-sizing: border-box
     scrollbar-width: none
 
-    &::-webkit-scrollbar
-        display: none
-
 *, 
 *::before, 
 *::after
@@ -34,3 +31,8 @@ body.dark .icon-wrapper img
 
 .container, main, header .flex-wrapper
     @include container-a
+
+
+// @media (prefers-reduced-motion)
+//     *
+//         animation: none

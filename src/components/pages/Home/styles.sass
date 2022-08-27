@@ -3,9 +3,19 @@
 .countries-list
     padding-bottom: 5em
 
-    @include tablet
-        > .list
+    .msg
+        font-size: var(--text-xxl)
+        margin-top: 4em
+        text-align: center
+
+    > .list
+        display: grid
+        gap: 4em
+        grid-template-columns: 1fr
+
+        @include mobile-only
+            padding: 0 1.5em
+
+        @include tablet
             padding-top: 2em
-            display: grid
-            gap: 70px
             grid-template-columns: repeat(4, 1fr)

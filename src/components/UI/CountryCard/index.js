@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 
 import "./styles.sass"
 
-export default ({ flags, name, population, region, capital }) => (
+export default ({ flags, name, population, region, capital, ccn3: code }) => (
     <div className="item country-card">
-        <Link to={`/country/${name.common}`}>
+        <Link to={`/country/${code}`}>
             <div className="flag">
                 <img src={flags.svg} alt={`flag of ${name.official}`} />
             </div>

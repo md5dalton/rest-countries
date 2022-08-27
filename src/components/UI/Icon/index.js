@@ -2,10 +2,10 @@ import React from "react"
 
 export default ({ name }) => {
 
-    const style = {
-        mask: `images/icon-${name}.svg`,
-        maskSize: "cover"
-    }
+    // const style = {
+    //     mask: `images/icon-${name}.svg`,
+    //     maskSize: "cover"
+    // }
     // console.log(importSVG(name))
     return (
         <div className="icon-wrapper">

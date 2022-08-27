@@ -1,30 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import Select from '../../../UI/Select'
 
 import "./styles.sass"
 
-export default ({ getItems }) => {
+const options = [
+    "africa",
+    "america",
+    "asia",
+    "europe",
+    "oceania"
+]
+
+export default ({ setQuery }) => {
     // https://restcountries.com/v3.1/region/{region}
 
-    const [query, setQuery] = useState("")
-    
-    const onChange = e => setQuery(e.target.value)
-    
-    useEffect(() => {
-
-        if (query) getItems(`region/${query}`)
-        
-    }, [query])
-    
+    const onChangeHandler = region => setQuery(region ? `region/${region}` : "all")
 
     return (
-        <select value={query} onChange={onChange}>
-            <option value="" disabled hidden>Filter by Region</option>
-            <option value="africa">Africa</option>
-            <option value="america">America</option>
-            <option value="asia">Asia</option>
-            <option value="europe">Europe</option>
-            <option value="oceania">Oceania</option>
-        </select>
+        <Select onChange={onChangeHandler} options={options.map(item => ({value: item, name: item}))}>Filter by Region</Select>
+        // <select value={query} onChange={onChange}>
+        //     <option value="" disabled hidden>Filter by Region</option>
+        //     <option value="africa">Africa</option>
+        //     <option value="america">America</option>
+        //     <option value="asia">Asia</option>
+        //     <option value="europe">Europe</option>
+        //     <option value="oceania">Oceania</option>
+        // </select>
     )
 
 }

@@ -12,7 +12,7 @@ export default ({ name, flags, population, region, subregion, capital, tld, curr
         <Fragment>
             <Toolbar>
                 <button onClick={() => navigate(-1)}>
-                    <Icon name="arrow-back" />
+                    <Icon name="arrow-left" />
                     <span>Back</span>
                 </button>
             </Toolbar>

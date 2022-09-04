@@ -1,13 +1,20 @@
 @use '../../../../styles/util' as *
 
-.toolbar .filter
-    width: fit-content
-    display: flex
-    align-items: center
+.filter
+    @include flex
+    @include padding-x
+    @include shadow
+    gap: 1rem
     border-radius: 5px
-    box-shadow: 0 0 5px var(--shadow)
     background-color: var(--color-bg-elements)
-    padding-right: 1em
+
+    button
+        text-align: initial
+        width: 100%
+        
+    .placeholder
+        flex-grow: 1
 
     @include mobile-only
-        margin-top: 2.5em
+        @include padding
+        margin-top: 2.5rem

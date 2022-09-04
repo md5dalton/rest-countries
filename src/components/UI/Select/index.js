@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import List from '../List'
 
+import "./styles.sass"
+
 const Option = ({ children, ...props }) => <div {...props}>{children}</div>
 
 export default ({ onChange, options, children }) => {

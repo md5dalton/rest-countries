@@ -27,10 +27,7 @@ export default () => {
                     <Icon name="search" />
                     <Search setQuery={setQuery} />
                 </div>
-                <div className="filter">
-                    <Filter setQuery={setQuery} />
-                    <Icon name="chevron-down" />
-                </div>
+                <Filter setQuery={setQuery} />
             </Toolbar>
             <section className="countries-list">
                 <Fragment>

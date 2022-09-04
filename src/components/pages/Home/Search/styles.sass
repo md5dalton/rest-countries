@@ -1,9 +1,10 @@
-.toolbar .search
-    align-items: center
-    display: flex
+@use '../../../../styles/util' as *
+
+.search
+    @include flex
+    @include shadow
+    @include radius
     padding: 1em 2em
-    border-radius: 5px
-    box-shadow: 0 0 5px var(--shadow)
     color: var(--color-text-secondary)
     background-color: var(--color-bg-elements)
 

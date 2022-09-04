@@ -3,8 +3,6 @@ import { Route, Routes } from 'react-router-dom'
 import Country from '../../pages/Country'
 import Home from '../../pages/Home'
 
-// import './styles.sass'
-
 export default () => (
     <main>
         <Routes>

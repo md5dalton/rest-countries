@@ -1,9 +1,8 @@
 @use '../../../styles/util' as *
 
-.toolbar button
-    display: flex
-    align-items: center
-    justify-content: center
+button.back
+    @include flex(center)
+    @include shadow
     appearance: none
     border: none
     width: 50px
@@ -12,7 +11,6 @@
     color: inherit
     cursor: pointer
     margin-top: 2em
-    box-shadow: 0 0 5px var(--shadow)
     background-color: var(--color-bg-elements)
 
     span

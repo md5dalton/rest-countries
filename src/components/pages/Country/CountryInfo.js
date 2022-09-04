@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom"
 import Toolbar from "../../UI/Toolbar"
 import Icon from "../../UI/Icon"
 import List from "../../UI/List"
+import Button from "../../UI/Button"
+import Img from "../../UI/Img"
 
 export default ({ name, flags, population, region, subregion, capital, tld, currencies, languages, borders }) => {
     
@@ -11,10 +13,10 @@ export default ({ name, flags, population, region, subregion, capital, tld, curr
     return (
         <Fragment>
             <Toolbar>
-                <button onClick={() => navigate(-1)}>
-                    <Icon name="arrow-left" />
+                <Button onClick={() => navigate(-1)}>
+                    <Img name="icon-arrow-left.svg" />
                     <span>Back</span>
-                </button>
+                </Button>
             </Toolbar>
             <div className="country-info">
                 <div className="flag">

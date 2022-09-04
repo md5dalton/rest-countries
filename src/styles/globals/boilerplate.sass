@@ -1,13 +1,9 @@
 @use "../util" as *
 
-html
-    box-sizing: border-box
-    scrollbar-width: none
-
 *, 
 *::before, 
 *::after
-    box-sizing: inherit
+    box-sizing: border-box
 
 body
     position: relative
@@ -15,7 +11,7 @@ body
     padding: 0
     background-color: var(--color-bg)
 
-body, input, a
+body, input, a, button
     font-family: var(--font)
     color: var(--color-text)
 
@@ -31,8 +27,3 @@ body.dark .icon-wrapper img
 
 .container, main, header .flex-wrapper
     @include container-a
-
-
-// @media (prefers-reduced-motion)
-//     *
-//         animation: none

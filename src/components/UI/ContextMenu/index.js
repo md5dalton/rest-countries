@@ -3,7 +3,7 @@ import Backdrop from '../Backdrop'
 
 import "./style.sass"
 
-export default ({ children, clickHandler }) => (
+export default ({ isOpen, children, clickHandler }) => isOpen && (
     <Fragment>
         <Backdrop isOpen={true} onClick={clickHandler} />
         <div className="context-menu">

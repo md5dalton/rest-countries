@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 import { useNavigate } from "react-router-dom"
-import Toolbar from "../../UI/Toolbar"
+import Toolbar from "../../layout/Toolbar"
 import Icon from "../../UI/Icon"
 import List from "../../UI/List"
 import Button from "../../UI/Button"

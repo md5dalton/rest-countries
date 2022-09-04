@@ -2,19 +2,40 @@
 
 .filter
     @include flex
-    @include padding-x
-    @include shadow
-    gap: 1rem
-    border-radius: 5px
-    background-color: var(--color-bg-elements)
 
     button
+        text-transform: capitalize
         text-align: initial
+        font-size: 14px
+
+    .dropdown, .options
+        @include shadow
+        @include radius
+        background-color: var(--color-bg-elements)
+
+    .context-menu-toggler
+        @include flex
+        @include padding
+        gap: 1rem
         width: 100%
-        
-    .placeholder
-        flex-grow: 1
+
+        .placeholder
+            flex-grow: 1
+
+    .options
+        @include padding
+        position: absolute
+        width: 100%
+        top: .5rem
+
+        .list
+            @include flex
+            align-items: initial
+            flex-direction: column
+            gap: .5rem
 
     @include mobile-only
-        @include padding
         margin-top: 2.5rem
+
+        .dropdown
+            width: 100%
